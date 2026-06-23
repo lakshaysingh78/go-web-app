@@ -1,91 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Learn DevOps</title>
 
-        header {
-            background-color: #FF6347;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    body {
+        background: #f4f7fb;
+        color: #333;
+    }
 
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
+    /* NAVBAR */
+    header {
+        background: linear-gradient(90deg, #ff512f, #dd2476);
+        padding: 15px 30px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        main {
-            padding: 20px;
-        }
+    .logo {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-        section {
-            margin-bottom: 20px;
-        }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>    
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ffe082;
+    }
+
+    /* HERO */
+    .hero {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                    url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31') center/cover no-repeat;
+        color: white;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        display: inline-block;
+        padding: 12px 25px;
+        background: #ff512f;
+        color: white;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #dd2476;
+        transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    .container {
+        padding: 50px 10%;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: #222;
+    }
+
+    /* CARDS */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    /* FOOTER */
+    footer {
+        background: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 40px;
+    }
+
+</style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="courses">Courses</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h1>Learn DevOps from Basics</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
-            </p>
-        </section>
+<header>
+    <nav>
+        <div class="logo">DevOps Academy</div>
+        <ul>
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="courses">Courses</a></li>
+            <li><a href="contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
-        </section>
+<section class="hero">
+    <div>
+        <h1>Learn DevOps from Scratch 🚀</h1>
+        <p>Master Docker, Kubernetes, AWS, Azure, CI/CD pipelines and more — completely free and beginner friendly.</p>
+        <a href="courses" class="btn">Explore Courses</a>
+    </div>
+</section>
 
-        <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
-        </section>
-    </main>
+<section class="container">
+    <h2 class="section-title">Why Learn With Us?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Beginner Friendly</h3>
+            <p>Start from zero knowledge and build strong DevOps fundamentals.</p>
+        </div>
 
-    <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
-    </footer>
+        <div class="card">
+            <h3>Hands-on Learning</h3>
+            <p>Real-world projects with Docker, Kubernetes and CI/CD pipelines.</p>
+        </div>
+
+        <div class="card">
+            <h3>Cloud Skills</h3>
+            <p>Learn AWS and Azure step by step with practical examples.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Courses Offered</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Docker & Containers</h3>
+            <p>Learn containerization from basics to advanced.</p>
+        </div>
+
+        <div class="card">
+            <h3>Kubernetes</h3>
+            <p>Deploy and manage scalable applications easily.</p>
+        </div>
+
+        <div class="card">
+            <h3>CI/CD Pipelines</h3>
+            <p>Automate deployment using Jenkins & GitHub Actions.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 DevOps Academy | Built with ❤️ for learners</p>
+</footer>
+
 </body>
 </html>
